@@ -31,7 +31,17 @@ void squareRoot(int in1) {
 void modulo(int in1, int in2) {
 	cout << "." << in1 % in2 << endl;
 }
-
+//continue or quit
+bool keepGo(char charin) {
+	bool out;
+	if ((charin == 'y') || (charin == 'Y')) {
+		out = true;
+	}
+	else {
+		out = false;
+	}
+	return out;
+}
 
 
 int main()
@@ -79,15 +89,12 @@ int main()
 		}
 		
 		
-		cout << " Please type 'y' to restart. ";
+		cout << "Please type 'y' to restart. ";
 		
 		//gets input to restart or not
 		cin >> quit;
-		if((quit == 'y') || (quit == 'Y')) {
-			keepGoing = true;
-		}else{
-			keepGoing = false;
-		}
+		keepGoing = keepGo(quit);
+		
 	}
 	
 	
